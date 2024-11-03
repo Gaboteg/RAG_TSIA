@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ex="http://example.org/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://example.org/immune_system">
+    <rdf:type rdf:resource="http://example.org/Concept"/>
+    <ex:link rdf:resource="http://example.org/cancer"/>
+    <ex:link rdf:resource="http://example.org/bacteria"/>
+    <ex:link rdf:resource="http://example.org/ear"/>
+    <ex:link rdf:resource="http://example.org/respiratory_system"/>
+    <ex:link rdf:resource="http://example.org/pathogen"/>
+    <ex:link rdf:resource="http://example.org/organism"/>
+    <ex:link rdf:resource="http://example.org/infection"/>
+    <ex:link rdf:resource="http://example.org/endocrine_system"/>
+    <ex:link rdf:resource="http://example.org/human_eye"/>
+    <ex:link rdf:resource="http://example.org/nervous_system"/>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.05366653011061041</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.07824662023760755</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.12331011880376895</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.00040966816878328555</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3240475215075789</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.10282671036460468</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.13560016386726753</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0045063498566161415</ex:weight>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/syndrome">
+    <rdf:type rdf:resource="http://example.org/Concept"/>
+    <ex:link rdf:resource="http://example.org/symptom"/>
+    <ex:link rdf:resource="http://example.org/signs_and_symptoms"/>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.33649289099526064</ex:weight>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/symptom">
+    <rdf:type rdf:resource="http://example.org/Concept"/>
+    <ex:link rdf:resource="http://example.org/cancer"/>
+    <ex:link rdf:resource="http://example.org/symptom"/>
+    <ex:link rdf:resource="http://example.org/respiratory_system"/>
+    <ex:link rdf:resource="http://example.org/infection"/>
+    <ex:link rdf:resource="http://example.org/human_eye"/>
+    <ex:link rdf:resource="http://example.org/nervous_system"/>
+    <ex:link rdf:resource="http://example.org/syndrome"/>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.01234567901234568</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.001122334455667789</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.05723905723905724</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.03479236812570146</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.13580246913580246</ex:weight>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/organism">
+    <rdf:type rdf:resource="http://example.org/Concept"/>
+    <ex:link rdf:resource="http://example.org/biology"/>
+    <ex:link rdf:resource="http://example.org/organism"/>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8190045248868778</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</ex:weight>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/organ_system">
+    <rdf:type rdf:resource="http://example.org/Concept"/>
+    <ex:link rdf:resource="http://example.org/ear"/>
+    <ex:link rdf:resource="http://example.org/immune_system"/>
+    <ex:link rdf:resource="http://example.org/endocrine_system"/>
+    <ex:link rdf:resource="http://example.org/respiratory_system"/>
+    <ex:link rdf:resource="http://example.org/human_eye"/>
+    <ex:link rdf:resource="http://example.org/nervous_system"/>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.02439024390243903</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.26829268292682934</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5121951219512195</ex:weight>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/human_eye">
+    <rdf:type rdf:resource="http://example.org/Concept"/>
+    <ex:link rdf:resource="http://example.org/immune_system"/>
+    <ex:link rdf:resource="http://example.org/ear"/>
+    <ex:link rdf:resource="http://example.org/respiratory_system"/>
+    <ex:link rdf:resource="http://example.org/organ_system"/>
+    <ex:link rdf:resource="http://example.org/endocrine_system"/>
+    <ex:link rdf:resource="http://example.org/nervous_system"/>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0005205622071837585</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.28682977615825095</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.02654867256637168</ex:weight>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/function_(biology)">
+    <rdf:type rdf:resource="http://example.org/Concept"/>
+    <ex:link rdf:resource="http://example.org/immune_system"/>
+    <ex:link rdf:resource="http://example.org/endocrine_system"/>
+    <ex:link rdf:resource="http://example.org/bacteria"/>
+    <ex:link rdf:resource="http://example.org/respiratory_system"/>
+    <ex:link rdf:resource="http://example.org/organism"/>
+    <ex:link rdf:resource="http://example.org/nervous_system"/>
+    <ex:link rdf:resource="http://example.org/biology"/>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.004329004329004329</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3939393939393939</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6103896103896104</ex:weight>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ear">
+    <rdf:type rdf:resource="http://example.org/Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biology">
+    <rdf:type rdf:resource="http://example.org/Concept"/>
+    <ex:link rdf:resource="http://example.org/bacteria"/>
+    <ex:link rdf:resource="http://example.org/biology"/>
+    <ex:link rdf:resource="http://example.org/organism"/>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.001490312965722802</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.016393442622950824</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.03129657228017884</ex:weight>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/pathogen">
+    <rdf:type rdf:resource="http://example.org/Concept"/>
+    <ex:link rdf:resource="http://example.org/infection"/>
+    <ex:link rdf:resource="http://example.org/organism"/>
+    <ex:link rdf:resource="http://example.org/biology"/>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.42418426103646834</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.23224568138195775</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.09788867562380038</ex:weight>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/systems_theory">
+    <rdf:type rdf:resource="http://example.org/Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infection">
+    <rdf:type rdf:resource="http://example.org/Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/system">
+    <rdf:type rdf:resource="http://example.org/Concept"/>
+    <ex:link rdf:resource="http://example.org/nervous_system"/>
+    <ex:link rdf:resource="http://example.org/systems_theory"/>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.008264462809917356</ex:weight>
+    <ex:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7520661157024793</ex:weight>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cancer">
+    <rdf:type rdf:resource="http://example.org/Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/respiratory_system">
+    <rdf:type rdf:resource="http://example.org/Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/nervous_system">
+    <rdf:type rdf:resource="http://example.org/Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/endocrine_system">
+    <rdf:type rdf:resource="http://example.org/Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/bacteria">
+    <rdf:type rdf:resource="http://example.org/Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/signs_and_symptoms">
+    <rdf:type rdf:resource="http://example.org/Concept"/>
+  </rdf:Description>
+</rdf:RDF>
