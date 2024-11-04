@@ -1,36 +1,26 @@
 from typing import List, Optional
-
 from fastapi import FastAPI
-from openai import AsyncOpenAI
-from openai.types.beta.threads.run import RequiredAction, LastError
-from openai.types.beta.threads.run_submit_tool_outputs_params import ToolOutput
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
+import requests
 
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",  # used to run with react server
-    ],
+    allow_origins=["http://localhost:3000"],  # usado para correr con el servidor de React
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-client = AsyncOpenAI(
-    api_key="aaaaaa",
-)
-assistant_id = "aaaaaaa"
-run_finished_states = ["completed", "failed", "cancelled", "expired", "requires_action"]
+# URL del endpoint del servicio que contiene tu modelo y RAG
+RAG_SERVICE_URL = "http://localhost:8000/api/ask"  # Actualiza este puerto si es necesario
 
-
+# Modelos de datos
 class RunStatus(BaseModel):
-    run_id: str
-    thread_id: str
-    status: str
-    required_action: Optional[RequiredAction]
-    last_error: Optional[LastError]
+    question: str
+    response: str
+    context: List[str]
 
 
 class ThreadMessage(BaseModel):
@@ -51,100 +41,64 @@ class CreateMessage(BaseModel):
 
 @app.post("/api/new")
 async def post_new():
-    thread = await client.beta.threads.create()
-    await client.beta.threads.messages.create(
-        thread_id=thread.id,
-        content="Greet the user and tell it about yourself and ask it what it is looking for.",
-        role="user",
-        metadata={
-            "type": "hidden"
-        }
-    )
-    run = await client.beta.threads.runs.create(
-        thread_id=thread.id,
-        assistant_id=assistant_id
-    )
-
-    return RunStatus(
-        run_id=run.id,
-        thread_id=thread.id,
-        status=run.status,
-        required_action=run.required_action,
-        last_error=run.last_error
-    )
+    """
+    Inicia una nueva conversación preguntando al usuario qué está buscando.
+    """
+    # Esta función ahora solo devuelve un mensaje inicial en la interfaz
+    return {"message": "¡Hola! Soy un asistente basado en RAG. ¿En qué puedo ayudarte hoy?"}
 
 
-@app.get("/api/threads/{thread_id}/runs/{run_id}")
-async def get_run(thread_id: str, run_id: str):
-    run = await client.beta.threads.runs.retrieve(
-        thread_id=thread_id,
-        run_id=run_id
-    )
-
-    return RunStatus(
-        run_id=run.id,
-        thread_id=thread_id,
-        status=run.status,
-        required_action=run.required_action,
-        last_error=run.last_error
-    )
-
-
-@app.post("/api/threads/{thread_id}/runs/{run_id}/tool")
-async def post_tool(thread_id: str, run_id: str, tool_outputs: List[ToolOutput]):
-    run = await client.beta.threads.runs.submit_tool_outputs(
-        run_id=run_id,
-        thread_id=thread_id,
-        tool_outputs=tool_outputs
-    )
-    return RunStatus(
-        run_id=run.id,
-        thread_id=thread_id,
-        status=run.status,
-        required_action=run.required_action,
-        last_error=run.last_error
-    )
+@app.post("/api/ask")
+async def ask_question(message: CreateMessage):
+    """
+    Envía la pregunta del usuario al servicio de RAG y devuelve la respuesta.
+    """
+    question_payload = {"question": message.content}
+    
+    # Enviar la pregunta al servicio de RAG
+    response = requests.post(RAG_SERVICE_URL, json=question_payload)
+    
+    if response.status_code == 200:
+        result = response.json()
+        return RunStatus(
+            question=message.content,
+            response=result["response"],
+            context=result["context"]
+        )
+    else:
+        return {"error": "No se pudo obtener una respuesta del servicio RAG"}
 
 
 @app.get("/api/threads/{thread_id}")
 async def get_thread(thread_id: str):
-    messages = await client.beta.threads.messages.list(
-        thread_id=thread_id
-    )
-
-    result = [
+    """
+    Obtiene la conversación actual. Para este ejemplo, solo devuelve un mensaje simulado.
+    """
+    # Simulación de mensajes anteriores para la UI
+    messages = [
         ThreadMessage(
-            content=message.content[0].text.value,
-            role=message.role,
-            hidden="type" in message.metadata and message.metadata["type"] == "hidden",
-            id=message.id,
-            created_at=message.created_at
-        )
-        for message in messages.data
+            content="Este es un mensaje simulado de la conversación.",
+            role="assistant",
+            hidden=False,
+            id="1",
+            created_at=0
+        ),
+        ThreadMessage(
+            content="¿En qué más puedo ayudarte?",
+            role="assistant",
+            hidden=False,
+            id="2",
+            created_at=0
+        ),
     ]
 
-    return Thread(
-        messages=result,
-    )
+    return Thread(messages=messages)
 
 
 @app.post("/api/threads/{thread_id}")
 async def post_thread(thread_id: str, message: CreateMessage):
-    await client.beta.threads.messages.create(
-        thread_id=thread_id,
-        content=message.content,
-        role="user"
-    )
-
-    run = await client.beta.threads.runs.create(
-        thread_id=thread_id,
-        assistant_id=assistant_id
-    )
-
-    return RunStatus(
-        run_id=run.id,
-        thread_id=thread_id,
-        status=run.status,
-        required_action=run.required_action,
-        last_error=run.last_error
-    )
+    """
+    Envía un nuevo mensaje a la conversación existente y obtiene una respuesta del modelo.
+    """
+    # Reutilizar el endpoint `ask_question` para obtener la respuesta
+    return await ask_question(message)
