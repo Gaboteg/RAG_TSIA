@@ -157,4 +157,47 @@
     <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q9649"/>
     <schema1:name>Biliary tract</schema1:name>
   </rdf:Description>
+
+  <!-- Entity Pacient -->
+  <rdf:Description rdf:about="http://example.org/Pacient1">
+    <ex:type>Pacient</ex:type>
+    <schema1:name>John Doe</schema1:name>
+    <schema1:age>45</schema1:age>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://example.org/Pacient2">
+    <ex:type>Pacient</ex:type>
+    <schema1:name>Jane Smith</schema1:name>
+    <schema1:age>30</schema1:age>
+  </rdf:Description>
+
+  <!-- Entity Condition -->
+  <rdf:Description rdf:about="http://example.org/Condition1">
+    <ex:type>Condition</ex:type>
+    <schema1:name>Hypertension</schema1:name>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://example.org/Condition2">
+    <ex:type>Condition</ex:type>
+    <schema1:name>Asthma</schema1:name>
+  </rdf:Description>
+
+  <!--  suffersFrom from (Pacient to Condition) -->
+  <rdf:Description rdf:about="http://example.org/Pacient1">
+    <ex:suffersFrom rdf:resource="http://example.org/Condition1"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://example.org/Pacient2">
+    <ex:suffersFrom rdf:resource="http://example.org/Condition2"/>
+  </rdf:Description>
+
+  <!-- Affects(Condition to System) -->
+  <rdf:Description rdf:about="http://example.org/Condition1">
+    <ex:affects rdf:resource="http://www.wikidata.org/entity/Q11068"/> <!-- circulatory system -->
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://example.org/Condition2">
+    <ex:affects rdf:resource="http://www.wikidata.org/entity/Q7891"/> <!-- respiratory system -->
+  </rdf:Description>
+  
 </rdf:RDF>
