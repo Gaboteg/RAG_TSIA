@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:schema1="http://schema.org/"
+>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q181100">
+    <schema1:isASystemOf rdf:resource="http://www.wikidata.org/entity/Q23852"/>
+    <schema1:name>urinary system</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q2304808">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q1059"/>
+    <schema1:name>memory T cell</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q13400765">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q7891"/>
+    <schema1:name>respiratory tract</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q7886">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q7891"/>
+    <schema1:name>lung</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q483213">
+    <schema1:isASystemOf rdf:resource="http://www.wikidata.org/entity/Q23852"/>
+    <schema1:name>integumentary system</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q7891">
+    <schema1:isASystemOf rdf:resource="http://www.wikidata.org/entity/Q23852"/>
+    <schema1:name>respiratory system</schema1:name>
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q11068"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q179422">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q712604"/>
+    <schema1:name>lymph</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q9368">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q9649"/>
+    <schema1:name>liver</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q7895">
+    <schema1:isASystemOf rdf:resource="http://www.wikidata.org/entity/Q23852"/>
+    <schema1:name>reproductive system</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q9618">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q9649"/>
+    <schema1:name>pancreas</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q1479790">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q7895"/>
+    <schema1:name>gametangium</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q175449">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q7891"/>
+    <schema1:name>trachea</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q11238641">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q712604"/>
+    <schema1:name>lymphatic vessel</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q11078">
+    <schema1:isASystemOf rdf:resource="http://www.wikidata.org/entity/Q23852"/>
+    <schema1:name>endocrine system</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q9377">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q181100"/>
+    <schema1:name>kidney</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q174778">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q7891"/>
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q9649"/>
+    <schema1:name>pharynx</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q134938">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q9649"/>
+    <schema1:name>salivary gland</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q9637">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q7891"/>
+    <schema1:name>larynx</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q11068">
+    <schema1:isASystemOf rdf:resource="http://www.wikidata.org/entity/Q23852"/>
+    <schema1:name>circulatory system</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q28015725">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q181100"/>
+    <schema1:name>upper urinary tract</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q9385">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q181100"/>
+    <schema1:name>ureter</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q181602">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q7891"/>
+    <schema1:name>bronchus</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q28015726">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q181100"/>
+    <schema1:name>lower urinary tract</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q9382">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q181100"/>
+    <schema1:name>urinary bladder</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q9649">
+    <schema1:isASystemOf rdf:resource="http://www.wikidata.org/entity/Q23852"/>
+    <schema1:name>human digestive system</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q1370895">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q9649"/>
+    <schema1:name>human mouth</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q9386">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q181100"/>
+    <schema1:name>urethra</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q1029907">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q9649"/>
+    <schema1:name>stomach</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q11090">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q9649"/>
+    <schema1:name>small intestine</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q712604">
+    <schema1:isASystemOf rdf:resource="http://www.wikidata.org/entity/Q23852"/>
+    <schema1:name>lymphatic system</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q156104">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q7891"/>
+    <schema1:name>nasal cavity</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q173710">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q9649"/>
+    <schema1:name>esophagus</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q170758">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q712604"/>
+    <schema1:name>lymph node</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q1059">
+    <schema1:isASystemOf rdf:resource="http://www.wikidata.org/entity/Q23852"/>
+    <schema1:name>immune system</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q11083">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q9649"/>
+    <schema1:name>large intestine</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q158716">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q9649"/>
+    <schema1:name>rectum</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q13168533">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q11068"/>
+    <schema1:name>cardiovascular system</schema1:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q79216892">
+    <schema1:partOf rdf:resource="http://www.wikidata.org/entity/Q9649"/>
+    <schema1:name>Biliary tract</schema1:name>
+  </rdf:Description>
+</rdf:RDF>

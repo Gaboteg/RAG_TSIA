@@ -81,9 +81,9 @@ def generate_response_with_context(question, context):
         outputs = model.generate(
             **inputs,
             max_new_tokens=150,
-            temperature=0.7#,
-            #top_p=0.9,
-            #top_k=50
+            temperature=0.7,
+            top_p=0.9,
+            top_k=50
         )
     
     response = tokenizer.decode(outputs[0], skip_special_tokens=True)
