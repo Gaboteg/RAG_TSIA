@@ -2,6 +2,7 @@
 <rdf:RDF
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:schema1="http://schema.org/"
+   xmlns:ex="http://example.org/"
 >
   <rdf:Description rdf:about="http://www.wikidata.org/entity/Q181100">
     <schema1:isASystemOf rdf:resource="http://www.wikidata.org/entity/Q23852"/>
@@ -199,5 +200,4 @@
   <rdf:Description rdf:about="http://example.org/Condition2">
     <ex:affects rdf:resource="http://www.wikidata.org/entity/Q7891"/> <!-- respiratory system -->
   </rdf:Description>
-  
 </rdf:RDF>
