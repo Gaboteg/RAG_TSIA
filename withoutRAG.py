@@ -9,12 +9,12 @@ tokenizer = AutoTokenizer.from_pretrained(model_name, use_auth_token="hf_xGtbHVf
 model = AutoModelForCausalLM.from_pretrained(model_name, use_auth_token="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")
 
 # Ejemplo de entrada
-prompt = "¿que es el Epitelio simple cuboidal?"
+prompt = "Que tipos de tejido muscular conoces?"
 inputs = tokenizer(prompt, return_tensors="pt")
 
 # Generar una respuesta
 with torch.no_grad():
-    outputs = model.generate(**inputs, max_new_tokens=100)
+    outputs = model.generate(**inputs, max_new_tokens=200)
 response = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
 print("Respuesta:", response)
